@@ -105,7 +105,7 @@ export default function MealsScreen() {
           selected.types.map((sel, i) => (
             <Card key={i} style={styles.mealCard}>
               <View style={styles.mealHeader}>
-                <Text style={styles.mealTitle}>{sel.type}</Text>
+                <Text style={styles.mealTitle}>{transformType(sel.type)}</Text>
                 <View style={styles.timeContainer}>
                   <Clock size={16} color="#6B7280" />
                   <Text style={styles.timeText}>{sel.time}</Text>
@@ -284,3 +284,18 @@ const styles = StyleSheet.create({
     color: '#1F2937',
   },
 });
+
+const transformType = (text: string) => {
+  switch (text) {
+    case 'BREAKFAST':
+      return 'Sarapan';
+    case 'LUNCH':
+      return 'Makan Siang';
+    case 'DINNER':
+      return 'Makan Malam';
+    case 'SNACK':
+      return 'Snack';
+    default:
+      return text;
+  }
+};
