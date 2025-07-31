@@ -138,7 +138,7 @@ export default function MealsScreen() {
                     style={styles.addButton}
                     onPress={() => handleAdd(menu)}
                   >
-                    <Text style={styles.addButtonText}>Add</Text>
+                    <Text style={styles.addButtonText}>Tambah</Text>
                   </TouchableOpacity>
                 </View>
               ))}
